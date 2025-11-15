@@ -34,7 +34,7 @@ if api_key_input:
             if is_valid:
                 st.session_state["api_key"] = api_key_input
                 st.session_state["is_key_valid"] = True
-                st.sidebar.success("API Key is valid and saved!")
+                st.sidebar.success("API Key is valid and saved for this session!")
             else:
                 st.session_state["is_key_valid"] = False
                 st.sidebar.error("Invalid API Key. Please check and try again.")
@@ -110,4 +110,4 @@ if st.session_state.get("is_key_valid", False):
         except Exception as e:
             st.error(f"An error occurred: {e}")
 else:
-    st.warning("Please enter and validate your API key in the sidebar to begin.")
+    st.warning("Please enter and validate your Gemini API key in the sidebar to begin.")
