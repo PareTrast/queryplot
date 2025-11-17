@@ -1,4 +1,4 @@
-# AI-Powered Data Analyzer
+# QueryPlot
 
 This project is a Streamlit web application that allows users to upload a CSV file and use natural language prompts to automatically generate data analyses and visualizations. It leverages a Large Language Model (LLM) like Google's Gemini to understand user requests and generate the corresponding Python code for analysis.
 
