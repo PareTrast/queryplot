@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_extras.bottom_container import bottom
 import pandas as pd
 import io
 import os
@@ -12,12 +13,23 @@ from data_analyzer import (
 )
 
 # --- Streamlit App Configuration ---
-st.set_page_config(page_title="AI Data Analyzer", page_icon="🤖", layout="wide")
+st.set_page_config(page_title="QueryPlot", page_icon="🤖", layout="wide")
 
-st.title("🤖 AI-Powered Data Analyzer")
+APP_TITLE = "QueryPlot"
+st.title(APP_TITLE)
 st.write(
     "Upload a CSV file and use natural language to generate data visualizations and analyses."
 )
+
+with bottom():
+    col1, col2 = st.columns(2)
+    with col1:
+        st.write(
+            f"If you find {APP_TITLE} useful, consider supporting its development:"
+        )
+
+    with col2:
+        st.link_button("Buy Me a Coffee", "https://www.buymeacoffee.com/kdickerson")
 
 # --- API Key Management in Sidebar ---
 st.sidebar.header("Configuration")
